@@ -32,10 +32,10 @@ void Snake::move(int random)
 
 	if (random == 0)
 	{
-		if (_direction != 2)
+		if (_direction != DOWN)
 		{
 			_snake.push_front(Block(_snake.front().getX(), _snake.front().getY() - 25));
-			_direction = 0;
+			_direction = UP;
 		}
 		else
 		{
@@ -45,10 +45,10 @@ void Snake::move(int random)
 
 	else if (random == 3)
 	{
-		if (_direction != 1)
+		if (_direction != LEFT)
 		{
 			_snake.push_front(Block(_snake.front().getX() + 25, _snake.front().getY()));
-			_direction = 3;
+			_direction = RIGHT;
 		}
 		else
 		{
@@ -58,10 +58,10 @@ void Snake::move(int random)
 
 	else if (random == 2)
 	{
-		if (_direction != 0)
+		if (_direction != UP)
 		{
 			_snake.push_front(Block(_snake.front().getX(), _snake.front().getY() + 25));
-			_direction = 2;
+			_direction = DOWN;
 		}
 		else
 		{
@@ -72,10 +72,10 @@ void Snake::move(int random)
 
 	else if (random == 1)
 	{
-		if (_direction != 3)
+		if (_direction != RIGHT)
 		{
 			_snake.push_front(Block(_snake.front().getX() - 25, _snake.front().getY()));
-			_direction = 1;
+			_direction = LEFT;
 		}
 		else
 		{
