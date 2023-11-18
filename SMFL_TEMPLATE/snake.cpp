@@ -14,28 +14,28 @@
 
 using namespace std;
 
-Snake::Snake(sf::RenderWindow& App)
+Snake::Snake()
 {
-	_app = &App;
 	_direction = RIGHT;
 
 	// Draws the initial snake
 	_snake.push_front(Block(25, 0));
-	_snake.push_front(Block(50, 0));
+	_snake.push_front(Block(100, 0));
 }
 
 
-void Snake::move()
+void Snake::move(int random)
 {
 	shrink();
-	int random = rand() % 4;
+	
+	_direction = random;
 
 	if (random == 0)
 	{
-		if (_direction != DOWN)
+		if (_direction != 2)
 		{
 			_snake.push_front(Block(_snake.front().getX(), _snake.front().getY() - 25));
-			_direction = UP;
+			_direction = 0;
 		}
 		else
 		{
@@ -43,12 +43,12 @@ void Snake::move()
 		}
 	}
 
-	else if (random == 1)
+	else if (random == 3)
 	{
-		if (_direction != LEFT)
+		if (_direction != 1)
 		{
 			_snake.push_front(Block(_snake.front().getX() + 25, _snake.front().getY()));
-			_direction = RIGHT;
+			_direction = 3;
 		}
 		else
 		{
@@ -58,10 +58,10 @@ void Snake::move()
 
 	else if (random == 2)
 	{
-		if (_direction != UP)
+		if (_direction != 0)
 		{
 			_snake.push_front(Block(_snake.front().getX(), _snake.front().getY() + 25));
-			_direction = DOWN;
+			_direction = 2;
 		}
 		else
 		{
@@ -70,12 +70,12 @@ void Snake::move()
 
 	}
 
-	else if (random == 3)
+	else if (random == 1)
 	{
-		if (_direction != RIGHT)
+		if (_direction != 3)
 		{
 			_snake.push_front(Block(_snake.front().getX() - 25, _snake.front().getY()));
-			_direction = LEFT;
+			_direction = 1;
 		}
 		else
 		{
@@ -84,7 +84,7 @@ void Snake::move()
 	}
 }
 
-void Snake::draw()
+void Snake::draw(sf::RenderWindow& App, int a)
 {
 	for (list<Block>::iterator it = _snake.begin(); it != _snake.end(); it++)
 	{
@@ -92,10 +92,21 @@ void Snake::draw()
 		float y = it->getY();
 
 		sf::RectangleShape block(sf::Vector2f(20,20));
-		block.setFillColor(sf::Color::Red);
+
+		if (a == 0) {
+			block.setFillColor(sf::Color::Red);
+		}
+		else if (a == 1) {
+			block.setFillColor(sf::Color::White);
+		}else if (a == 2) {
+			block.setFillColor(sf::Color::Yellow);
+		}else if (a == 3) {
+			block.setFillColor(sf::Color::Blue);
+		}
+
 		block.move(x, y);
 
-		_app->draw(block);
+		App.draw(block);
 	}
 }
 

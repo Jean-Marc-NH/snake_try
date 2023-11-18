@@ -25,10 +25,10 @@ private:
 	int _direction;
 
 public:
-	Snake(sf::RenderWindow&);
+	Snake();
 
-	void move();
-	void draw();
+	void move(int);
+	void draw(sf::RenderWindow&, int);
 
 	void grow();
 	void shrink();

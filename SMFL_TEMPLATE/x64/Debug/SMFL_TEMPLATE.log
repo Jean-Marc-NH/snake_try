@@ -1,16 +1,5 @@
-﻿  main.cpp
-E:\Archivos\VS 2022\SMFL_TEMPLATE\SMFL_TEMPLATE\main.cpp(60,6): warning C4101: 'fruitX': variable local sin referencia
-E:\Archivos\VS 2022\SMFL_TEMPLATE\SMFL_TEMPLATE\main.cpp(61,6): warning C4101: 'fruitY': variable local sin referencia
-C:\SFML-2.6.1\include\SFML\System\Thread.inl(48,36): error C2664: 'void (Snake &)': el argumento 1 no puede convertirse de 'A' a 'Snake &'
-          with
-          [
-              A=Snake *
-          ]
-C:\SFML-2.6.1\include\SFML\System\Thread.inl(48,18): message : al compilar la función del miembro clase plantilla "void sf::priv::ThreadFunctorWithArg<void (__cdecl *)(Snake &),Snake *>::run(void)"
-C:\SFML-2.6.1\include\SFML\System\Thread.inl(79,24): message : Vea la referencia a la creación de una instancia de clase plantilla "sf::priv::ThreadFunctorWithArg<void (__cdecl *)(Snake &),Snake *>" que se está compilando
-E:\Archivos\VS 2022\SMFL_TEMPLATE\SMFL_TEMPLATE\main.cpp(67,21): message : Vea la referencia a la creación de una instancia de la función plantilla "sf::Thread::Thread<void(__cdecl *)(Snake &),Snake*>(F,A)" que se está compilando
-          with
-          [
-              F=void (__cdecl *)(Snake &),
-              A=Snake *
-          ]
+﻿  snake.cpp
+C:\Users\alumno-n415\Desktop\snake_try-main\SMFL_TEMPLATE\snake.cpp(91,11): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\alumno-n415\Desktop\snake_try-main\SMFL_TEMPLATE\snake.cpp(92,11): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1134,5): error MSB6006: "link.exe" salió con el código 1168.
+LINK : fatal error LNK1168: no se puede abrir C:\Users\alumno-n415\Desktop\snake_try-main\x64\Debug\SMFL_TEMPLATE.exe para escritura
