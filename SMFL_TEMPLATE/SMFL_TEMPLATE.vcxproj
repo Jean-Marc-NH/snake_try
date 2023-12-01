@@ -130,15 +130,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="block.cpp" />
-    <ClCompile Include="fruit.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="snake.cpp" />
+    <ClCompile Include="..\..\..\..\Descargas\snake\snake\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="block.hpp" />
-    <ClInclude Include="fruit.hpp" />
-    <ClInclude Include="snake.hpp" />
+    <ClInclude Include="..\..\..\..\Descargas\snake\snake\table.h" />
+    <ClInclude Include="..\..\..\..\Descargas\snake\snake\worm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

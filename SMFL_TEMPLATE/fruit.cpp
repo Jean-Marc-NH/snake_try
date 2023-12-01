@@ -1,3 +1,12 @@
+/*
+ *  fruit.cpp
+ *  snake
+ *
+ *  Created by Mathieu Allaire on 11-01-24.
+ *  Copyright 2011 mathieuallaire.ca. All rights reserved.
+ *
+ */
+
 #include <SFML/Graphics.hpp>
 
 #include "fruit.hpp"

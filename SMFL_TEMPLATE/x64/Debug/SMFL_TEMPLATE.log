@@ -1,5 +1,30 @@
-﻿  snake.cpp
-C:\Users\alumno-n415\Desktop\snake_try-main\SMFL_TEMPLATE\snake.cpp(91,11): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\alumno-n415\Desktop\snake_try-main\SMFL_TEMPLATE\snake.cpp(92,11): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1134,5): error MSB6006: "link.exe" salió con el código 1168.
-LINK : fatal error LNK1168: no se puede abrir C:\Users\alumno-n415\Desktop\snake_try-main\x64\Debug\SMFL_TEMPLATE.exe para escritura
+﻿  main.cpp
+E:\Descargas\snake\snake\worm.h(126,12): warning C4244: 'argumento': conversión de '_Rep' a 'unsigned int'; posible pérdida de datos
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+E:\Descargas\snake\snake\worm.h(165,39): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Descargas\snake\snake\worm.h(165,29): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Descargas\snake\snake\worm.h(169,77): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Descargas\snake\snake\worm.h(169,50): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Descargas\snake\snake\table.h(46,16): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+E:\Descargas\snake\snake\table.h(85,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+E:\Descargas\snake\snake\main.cpp(5,5): error C2374: 'gus_num': nueva definición; inicialización múltiple
+E:\Descargas\snake\snake\main.cpp(4,5): message : vea la declaración de 'gus_num'

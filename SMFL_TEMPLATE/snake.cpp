@@ -14,21 +14,21 @@
 
 using namespace std;
 
-Snake::Snake()
+Snake::Snake(sf::RenderWindow& App)
 {
+	_app = &App;
 	_direction = RIGHT;
 
 	// Draws the initial snake
 	_snake.push_front(Block(25, 0));
-	_snake.push_front(Block(100, 0));
+	_snake.push_front(Block(50, 0));
 }
 
 
-void Snake::move(int random)
+void Snake::move()
 {
 	shrink();
-	
-	_direction = random;
+	int random = rand() % 4;
 
 	if (random == 0)
 	{
@@ -43,7 +43,7 @@ void Snake::move(int random)
 		}
 	}
 
-	else if (random == 3)
+	else if (random == 1)
 	{
 		if (_direction != LEFT)
 		{
@@ -70,7 +70,7 @@ void Snake::move(int random)
 
 	}
 
-	else if (random == 1)
+	else if (random == 3)
 	{
 		if (_direction != RIGHT)
 		{
@@ -84,7 +84,7 @@ void Snake::move(int random)
 	}
 }
 
-void Snake::draw(sf::RenderWindow& App, int a)
+void Snake::draw()
 {
 	for (list<Block>::iterator it = _snake.begin(); it != _snake.end(); it++)
 	{
@@ -92,21 +92,10 @@ void Snake::draw(sf::RenderWindow& App, int a)
 		float y = it->getY();
 
 		sf::RectangleShape block(sf::Vector2f(20,20));
-
-		if (a == 0) {
-			block.setFillColor(sf::Color::Red);
-		}
-		else if (a == 1) {
-			block.setFillColor(sf::Color::White);
-		}else if (a == 2) {
-			block.setFillColor(sf::Color::Yellow);
-		}else if (a == 3) {
-			block.setFillColor(sf::Color::Blue);
-		}
-
+		block.setFillColor(sf::Color::Red);
 		block.move(x, y);
 
-		App.draw(block);
+		_app->draw(block);
 	}
 }
 

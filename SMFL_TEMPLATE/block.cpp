@@ -1,3 +1,12 @@
+/*
+ *  block.cpp
+ *  snake
+ *
+ *  Created by Mathieu Allaire on 11-01-23.
+ *  Copyright 2011 mathieuallaire.ca. All rights reserved.
+ *
+ */
+
 #include "block.hpp"
 
 using namespace std;
